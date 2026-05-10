@@ -7,12 +7,10 @@ metadata:
 
 spec:
   project: default
-
   source:
     repoURL: https://github.com/bablu3k/three-tier-gitops.git
     targetRevision: main
     path: helm/three-tier
-
     helm:
       valueFiles:
         - values.yaml

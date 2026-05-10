@@ -1,13 +1,11 @@
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
-
 metadata:
   name: app-network-policy
   namespace: three-tier-1
 
 spec:
   podSelector: {}
-
   policyTypes:
     - Ingress
     - Egress
