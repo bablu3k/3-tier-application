@@ -10,9 +10,7 @@ spec:
 
   source:
     repoURL: https://github.com/bablu3k/three-tier-gitops.git
-
-    targetRevision: main
-
+    targetRevision: master
     path: helm/three-tier
 
     helm:
