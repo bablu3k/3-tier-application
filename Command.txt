@@ -1,0 +1,82 @@
+Push code to GitHub: ✅
+git init
+git add .
+git commit -m "3 tier app deployment"
+git push origin main
+
+create a new repository on the command line ✅
+echo "# 3-tier-application" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/bablu3k/3-tier-application.git
+git push -u origin main
+
+
+push an existing repository from the command line ✅
+git remote add origin https://github.com/bablu3k/3-tier-application.git
+git branch -M main
+git push -u origin main
+
+
+
+Deploy ns: ✅
+kubectl apply -f manifests/namespace.yaml
+kubectl get ns
+
+Create pv: ✅
+kubectl apply -f manifests/pv.yaml
+kubectl get pv
+kubectl get pvc -n three-tier
+
+
+Deploy via ArgoCD: ✅
+kubectl apply -f applications/three-tier-app.yaml
+
+
+Verification ✅
+kubectl get pods -n three-tier
+kubectl get svc -n three-tier
+kubectl get ingress -n three-tier
+kubectl get pvc -n three-tier
+
+
+
+Recommended enterprise additions: ✅
+
+HPA Autoscaling
+Redis Cache
+TLS via cert-manager
+
+Monitoring:
+Prometheus
+Grafana
+
+Logging:
+Elasticsearch
+Kibana
+
+Secrets:
+HashiCorp Vault
+
+
+
+
+
+
+GitOps Workflow ✨
+
+Developer Push
+      ↓
+GitHub Repository
+      ↓
+ArgoCD Detects Change
+      ↓
+Helm Release Upgrade
+      ↓
+Kubernetes Rolling Deployment
+
+
+
+

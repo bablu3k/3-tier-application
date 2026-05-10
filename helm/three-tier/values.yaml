@@ -1,0 +1,26 @@
+web:
+  replicaCount: 2
+  image: nginx:latest
+  servicePort: 80
+
+app:
+  replicaCount: 2
+  image: node:18
+  servicePort: 3000
+
+db:
+  image: postgres:15
+  port: 5432
+
+postgres:
+  database: appdb
+  username: appuser
+  password: StrongPass123
+
+persistence:
+  size: 10Gi
+  storageClass: gp3
+
+ingress:
+  enabled: true
+  host: app.example.com
