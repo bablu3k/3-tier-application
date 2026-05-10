@@ -3,7 +3,7 @@ kind: NetworkPolicy
 
 metadata:
   name: default-deny
-  namespace: tthree-tier-1
+  namespace: three-tier-1
 
 spec:
   podSelector: {}
