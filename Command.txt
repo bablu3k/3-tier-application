@@ -4,6 +4,8 @@ git add .
 git commit -m "3 tier app deployment"
 git push origin main
 
+git clone origin https://github.com/bablu3k/3-tier-application.git
+
 create a new repository on the command line ✅
 echo "# 3-tier-application" >> README.md
 git init
@@ -22,12 +24,12 @@ git push -u origin main
 
 
 Deploy ns: ✅
-kubectl apply -f manifests/namespace.yaml
+kubectl apply -f namespace.yaml
 kubectl get ns
 
 Create pv: ✅
-kubectl apply -f manifests/pv.yaml
-kubectl get pv
+kubectl apply -f pv.yaml
+kubectl get pv -n three-tier
 kubectl get pvc -n three-tier
 
 
