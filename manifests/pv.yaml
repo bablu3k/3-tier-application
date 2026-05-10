@@ -23,7 +23,7 @@ kind: PersistentVolumeClaim
 
 metadata:
   name: postgres-pvc
-  namespace: three-tier
+  namespace: three-tier-1
 
 spec:
   accessModes:
